@@ -1,0 +1,4 @@
+- name: MSc Dissertation
+  descr: "For my MSc Data Science and Machine Learning thesis I performed an investigation of whether micro-Doppler radar data can be treated similarly to audio data, and hence whether audio machine learning models can be applied to micro-Doppler data to speed up and improve activity recognition."
+  image: pong.png
+  github: https://github.com/ktmai/msc-dissertation
