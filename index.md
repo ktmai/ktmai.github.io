@@ -9,6 +9,6 @@ I am currently a first year PhD student at University College London. My researc
 
 * Learning with limited labelled data
 * AI for social good
-* Applying machine learning to the natural sciences
+* Applying machine learning to the sciences
 * Widening participation in STEM
 </div>
