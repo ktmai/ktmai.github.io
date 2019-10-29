@@ -1,3 +1,3 @@
 # Personal Site
 
-Modified version of the [Jackal](https://github.com/clenemt/jackal) theme.
+Source code for my [personal site](https://ktmai.github.io), powered through Jekyll. Website uses a modified version of the [Jackal](https://github.com/clenemt/jackal) theme.
