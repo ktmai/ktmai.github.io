@@ -1,7 +1,4 @@
 _site
 .sass-cache
-.directory
-Thumbs.db
-_drafts
-.ruby-version
-Gemfile.lock
+.jekyll-metadata
+npm-debug.log

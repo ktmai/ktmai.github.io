@@ -2,7 +2,6 @@
 layout: post
 title:  "Applying Audio Deep Learning to Micro-Doppler Data"
 date:   2019-08-19 10:00:00
-categories: [academia, doppler]
 comments: false
 ---
 
@@ -35,42 +34,42 @@ Due to the sampling rate of these files not matching audio, they do not play in 
 ### Unprocessed Data
 The spectrograms in their unprocessed form converted back into the time-amplitude domain.
 
-[Sitting](/assets/unprocessed_sit.wav) [Standing](/assets/unprocessed_stand.wav) 
+[Sitting](/assets/sound/unprocessed_sit.wav) [Standing](/assets/sound/unprocessed_stand.wav) 
 
 ### DSGAN Transformed Data
 This data was transformed using DSGAN trained for 1 epoch with L2 loss.
 
-[Sitting](/assets/ds_sit.wav) [Standing](/assets/ds_stand.wav) 
+[Sitting](/assets/sound/ds_sit.wav) [Standing](/assets/sound/ds_stand.wav) 
 
 ### DiscoGAN Transformed Data
 This data was transformed using DiscoGAN trained for 5 epochs with L2 loss.
 
-[Sitting](/assets/disco_sit.wav) [Standing](/assets/disco_stand.wav) 
+[Sitting](/assets/sound/disco_sit.wav) [Standing](/assets/sound/disco_stand.wav) 
 
 ### CycleGAN Transformed Data
 This data was transformed using CycleGAN trained for 1 epoch.
 
-[Sitting](/assets/cycle_sit.wav) [Standing](/assets/cycle_stand.wav) 
+[Sitting](/assets/sound/cycle_sit.wav) [Standing](/assets/sound/cycle_stand.wav) 
 
 ### Z-score Standardised Data
 The data was z-score standardised to 0 mean and unit variance.
 
-[Sitting](/assets/normalised_sit.wav) [Standing](/assets/normalised_stand.wav) 
+[Sitting](/assets/sound/normalised_sit.wav) [Standing](/assets/sound/normalised_stand.wav) 
 
 ### Standardised and Rescaled Data
 After z-score standardisation, the mean and variance was changed to match the sound data's mean and variance.
 
-[Sitting](/assets/scale_sit.wav) [Standing](/assets/scale_stand.wav) 
+[Sitting](/assets/sound/scale_sit.wav) [Standing](/assets/sound/scale_stand.wav) 
 
 ### Scaled Data using amplitudes across frequency axis
 The data was normed and rescaled using the average amplitudes corresponding to each frequency bin.
 
-[Sitting](/assets/freq_sit.wav) [Standing](/assets/freq_stand.wav) 
+[Sitting](/assets/sound/freq_sit.wav) [Standing](/assets/sound/freq_stand.wav) 
 
 ### Scaled Data using amplitudes across time axis
 The data was normed and rescaled using the average amplitudes corresponding to each time bin.
 
-[Sitting](/assets/time_sit.wav) [Standing](/assets/time_stand.wav) 
+[Sitting](/assets/sound/time_sit.wav) [Standing](/assets/sound/time_stand.wav) 
 
 
 
