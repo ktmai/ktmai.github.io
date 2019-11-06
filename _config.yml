@@ -14,7 +14,7 @@ permalink: /:year-:month/:title/   # how should we display posts url
 # Meta settings
 email: kimberly.tran@ucl.ac.uk
 author: Kimberly Tran
-#twitter_username: clenemt
+twitter_username: kimberlyttran
 github_username: ktmai
 linkedin_username: kimberlytontran
 # github_source: jackal
