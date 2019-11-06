@@ -58,7 +58,7 @@ $lh-md:                     1.6;
 
 $fs-root:                   16px;
 $fs:                        1rem;
-$fs-md:                     1.25rem;
+$fs-md:                     1.2rem;
 
 $fs-h1:                     1.602em;
 $fs-h2:                     1.424rem;
@@ -85,6 +85,7 @@ $mq-breakpoints: (
 
 $container-widths: (
   sm: 620px,
-  md: 748px
+  md: 748px,
+  lg: 930px
 );
 
