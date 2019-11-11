@@ -114,7 +114,7 @@ $$\underset{\textbf{w}}{\textrm{min}}\;\lvert\lvert\mathbf{w}\rvert\rvert^2 + C\
 
 The reason for using the absolute function for the hinge loss relating to the unlabelled data is because we assume that the label for the unlabelled sample is $y^{*j}_{test} = \textrm{sign}(\textbf{w}^T\textbf{x}^j\_{test})$.
 
-The objective functions are no longer convex, meaning analytical methods are no longer suitable for finding solutions and other optimisation algorithms are required. Joachim describes the TSVM implementation as follows:
+The objective functions are no longer convex, meaning analytical methods are no longer suitable for finding solutions and other optimisation algorithms are required. Joachims describes the TSVM implementation as follows:
 
 1. Choose hyperparameters $C$ and $C^*$.
 2. Using $\mathbf{X}\_{train}$ and $\mathbf{y}_{train}$ learn a standard inductive SVM $f$.
@@ -137,6 +137,6 @@ An example notebook illustrating toy implementations of SVM and TSVM can be foun
 
 \[3\] Chapelle, O. et al. Semi-Supervised Learning. 2006. MIT Press. 
 
-\[4\] Joachim, T. Transductive Inference for Text Classification using Support Vector Machines. 1999. 
+\[4\] Joachims, T. Transductive Inference for Text Classification using Support Vector Machines. 1999. 
 
 \[5\] Collobert, R. et al. Large Scale Transductive SVMs. 2006. JMLR.
