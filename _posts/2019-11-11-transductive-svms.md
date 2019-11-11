@@ -82,7 +82,7 @@ Through this method, we can study the location of test samples and consequently 
 
 ## Model
 
-To extend the standard SVM to the transductive SVM ('TSVM'), we need to add additional constraints. In the setting with no slack variables, this can be expressed as:
+Transductive SVMs were introduced by Joachims in 1999. To extend the standard SVM to the TSVM, we need to add additional constraints. In the setting with no slack variables, this can be expressed as:
 
 $$
 \begin{align*}
@@ -114,7 +114,15 @@ $$\underset{\textbf{w}}{\textrm{min}}\;\lvert\lvert\mathbf{w}\rvert\rvert^2 + C\
 
 The reason for using the absolute function for the hinge loss relating to the unlabelled data is because we assume that the label for the unlabelled sample is $y^{*j}_{test} = \textrm{sign}(\textbf{w}^T\textbf{x}^j\_{test})$.
 
-The objective functions are no longer convex, meaning analytical methods are no longer suitable for finding solutions and other optimisation algorithms are required.
+The objective functions are no longer convex, meaning analytical methods are no longer suitable for finding solutions and other optimisation algorithms are required. Joachim describes the TSVM implementation as follows:
+
+1. Choose hyperparameters $C$ and $C^*$.
+2. Using $\mathbf{X}\_{train}$ and $\mathbf{y}_{train}$ learn a standard inductive SVM $f$.
+3. Set $C^{\*}\_{-}$ and $C^{\*}\_{+}$ to be some small numbers
+3. Generate predicted labels for $\mathbf{X}_{test}$ using $f$. 
+4. While $C^{\*}\_{-}$ and $C^{\*}\_{+}$ are incremented to $C^*$:
+    1. Learn a transductive SVM classifier $f'$ using $\mathbf{X}\_{train}, \mathbf{y}_{train}$ and $\mathbf{X}\_{test}$.
+    2. If there exists two test examples where changing the predicted label reduces the objective function, switch the labels. 
 
 
 ## Implementation
