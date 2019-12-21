@@ -41,7 +41,7 @@ Furthermore, edges can have _directions_ (depicted by arrows) and _weights_ asso
 
 _Semi-supervised_ learning refers to a collection of machine learning techniques that use both labelled and unlabelled data for training. 
 
-A semi-supervised problem can be characterised as follows: we have a dataset $X$ consisting of $l + u$ samples, where typically the number of labelled samples is much smaller than the number of unlabelled samples $l \ll u$. The first $l$ samples $X_L = \\{ x_1, x_2, ..., x_l \\}$ have a corresponding label $Y_{L} = \\{ y_1, y_2, ..., y_l \\}$ which can come from $C$ classes, all of which are represented in the labelled dataset. $X_U = \\{x_{l+1}, x_{l+2}, ..., x_{l+u} \\}$ denote the remaining samples and do not have a known label.
+A semi-supervised problem can be characterised as follows: we have a dataset $X$ consisting of $l + u$ samples, where typically the number of labelled samples is much smaller than the number of unlabelled samples $l \ll u$. The first $l$ samples $X_L = \\{ x_1, x_2, ..., x_l \\}$ have a corresponding label $Y_{L} = \\{ y_1, y_2, ..., y_l \\}$ which can come from $C$ classes, all of which are represented in the labelled dataset. $X_U = \\{x_{l+1}, x_{l+2}, ..., x_{l+u} \\}$ denote the remaining samples which are not labelled.
 
 ## Label Propagation
 
@@ -93,15 +93,15 @@ With increasing interest in training deep learning architectures with less label
 ### Neural Graph Machines
 The authors observed that the typical objective function used for neural networks is not transductive and does not exploit the nature of unlabelled data. 
 
-As a solution, neural graph machines combine neural networks and label propagation by using an objective function inspired by label propagation to train a neural network. Notabily, the objective function considers both labelled and unlabelled data points. Hidden representations are used instead of network outputs in the objective to ensure datapoints within a graph representation have similar predictions.
+As a solution, [neural graph machines](https://arxiv.org/abs/1703.04818) combine neural networks and label propagation by using an objective function inspired by label propagation to train a neural network. Notabily, the objective function considers both labelled and unlabelled data points. Hidden representations are used instead of network outputs in the objective to ensure datapoints within a graph representation have similar predictions.
 
 ### Transductive Propagation Networks
-This paper is motivated by the task of _few-shot learning_, which aims to learn a classifier that is trained with a small number of training examples per class. Few-shot learning tasks typically have a support set (known labelled examples used for training the neural network) and a query set (unseen examples used for testing). 
+[This paper](https://arxiv.org/abs/1805.10002) is motivated by the task of _few-shot learning_, which aims to learn a classifier that is trained with a small number of training examples per class. Few-shot learning tasks typically have a support set (known labelled examples used for training the neural network) and a query set (unseen examples used for testing). 
 
 This paper takes a transductive approach by including the query set in the optimisation objective. More specifically, the architecture involves transforming the input data into a feature embedding using a convolutional neural network, constructing a graph using the union of the support and query set, and conducting label propagation on this graph. The loss is computed with respect to the embedding and the graph. Finally, the parameters of the architecture are updated using backpropagation.
 
 ### Label Propagation for Deep Semi-Supervised Learning
-This paper also takes a transductive approach for a semi-supervised task. Initially, a neural network is used to train the labelled samples. Following this step, an iterative process is initiated. A nearest neighbour graph of the entire training set is computed and label spreading is conducted to generate pseudo-labels for the unlabelled samples. This newly labelled dataset (including both labelled and pseudo-labelled samples) is then used to retrain the neural network. To account for possible imbalanced classes, the pseudo-labels are weighted to provide a measure of uncertainty with regards to the estimated labels.
+[This paper](https://arxiv.org/abs/1904.04717) also takes a transductive approach for a semi-supervised task. Initially, a neural network is used to train the labelled samples. Following this step, an iterative process is initiated. A nearest neighbour graph of the entire training set is computed and label spreading is conducted to generate pseudo-labels for the unlabelled samples. This newly labelled dataset (including both labelled and pseudo-labelled samples) is then used to retrain the neural network. To account for possible imbalanced classes, the pseudo-labels are weighted to provide a measure of uncertainty with regards to the estimated labels.
 
 ## References
 
