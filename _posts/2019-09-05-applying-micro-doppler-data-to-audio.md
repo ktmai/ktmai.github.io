@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Applying Audio Deep Learning to Micro-Doppler Data"
-date:   2019-08-19 10:00:00
+date:   3019-08-19 10:00:00
 comments: false
 ---
 
