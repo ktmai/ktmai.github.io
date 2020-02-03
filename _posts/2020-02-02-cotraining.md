@@ -28,6 +28,8 @@ The co-training algorithm itself is agnostic to the choice of classifier, althou
 4. Add the predicted labels from above to $L$.
 5. Replenish $U'$ by sampling randomly from $U$.
 
+An implementation of the co-training paper can be found [here](https://github.com/ktmai/code-demonstrations/blob/master/Co-Training/Co_Training.ipynb).
+
 ## Label Propagation Perspective
 
 Wang and Zhou showed that the above approach can also be viewed as a type of [label propagation](https://ktmai.github.io/2019-12/label-propagation/). They stated that assigning a label to an unlabelled instance $x^j_v$ (where $v = 1, 2$) 
