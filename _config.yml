@@ -1,64 +1,29 @@
-# The main config file for your Jekyll template
-
-# Site settings
-title: Kimberly Mai              # used for the html title of every page
-#desc: >
-  #Write an awesome description for your new site here. You can edit this
-  #line in _config.yml. It will appear in your document head meta (for
-  #Google search results) and in your feed.xml site description.
-
-url: http://ktmai.github.com      # put your website hosting url here
-baseurl: ''                 # the subpath of your site, e.g. /blog
-permalink: /:year-:month/:title/   # how should we display posts url
-
-# Meta settings
-email: kimberly.mai@ucl.ac.uk
-author: Kimberly Mai
-twitter_username: kimberlytmai
-github_username: ktmai
-linkedin_username: kimberlytontran
-# github_source: jackal
-
-# Put your ga tracking code below
-#google_analytics: 'UA-XXXXXXXX-X'
-
-# Pagination settings
-paginate: 5                           # number of posts to show per page
-paginate_path: "/articles/page:num/"  # link scheme for articles, should be letf as is
-
-# Navigation settings
-# Used to define the navigation menu items
-# > Title is the tile of the navigation item, url the url and desc is the tooltip
-navigation:
-  - title: Blog
-    url: /articles/
-    desc: Blog Posts
-  - title: Research
-    url: /research/
-    desc: Research
-
-# Used by Jekyll to recognize what is a post and what is a page
-defaults:
-  -
-    scope:
-      path: ''
-      type: posts
-    values:
-      layout: post
-
-# Markdown parser settings
+highlighter: rouge
 markdown: kramdown
-kramdown:
-  input: GFM
-  hard_wrap: false          # you can change this if you feel like it
-  parse_block_html: true    # allow parsing html inside markdown
+rdiscount:
+  extensions: [smart]
+permalink: :title.html
+paginate: 5
+plugins: [jekyll-paginate]
+port: 4000
+safe: true
+url: http://ktmai.github.io
+author: Kimberly Mai
 
-# Build settings
-include:
-  - _pages                  # all your pages can be put inside pages (except articles)
-exclude:
-  - README.md
-  - vendor
-gems:
-  - jekyll-paginate
+# edit this section with your information
+# jekyllt.github.io - all contents run on /vitae/
+# for a normal use at the base of the server change it to "/"
+baseurl: /
+title: Kimberly Mai
+name: Kimberly Mai
+email: kimberly.mai@ucl.ac.uk
+email_full: mailto:kimberly.mai@ucl.ac.uk
+website: ktmai.github.io
+website_full: https://ktmai.github.io
+github: ktmai
+twitter: kimberlytmai
+linkedin: kimberlytontran
+google_scholar: https://scholar.google.com/citations?user=sw26nYwAAAAJ
 
+# needed for travis-ci build
+exclude: [vendor]

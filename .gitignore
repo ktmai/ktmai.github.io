@@ -1,4 +1,32 @@
-_site
-.sass-cache
+# OS X
+.DS_Store
+
+# Jekyll build
+/_site/
 .jekyll-metadata
-npm-debug.log
+#Gemfile.lock
+
+# webstorm
+.idea/
+
+# others
+*.swp
+package-lock.json
+
+# site build
+*.gem
+*.rbc
+.bundle
+.config
+coverage
+InstalledFiles
+lib/bundler/man
+pkg
+rdoc
+spec/reports
+test/tmp
+test/version_tmp
+tmp
+vendor
+Gemfile.lock
+node_modules
